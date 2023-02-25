@@ -114,7 +114,7 @@ class Hub:
         file_seg = self.GetUrlContentFile(information[0]['videoUrl'])
 
         format = content[0]['format']
-        quality = content[0]['quality']
+        quality_file = content[0]['quality']
         videoUrl = '/'.join(str(information[0]['videoUrl']).split('/')[:-1])
         urlSegment = videoUrl + '/' + file_seg[0]
         self.GetSegmentsAndDownload(nameVideo, format, urlSegment, videoUrl)
