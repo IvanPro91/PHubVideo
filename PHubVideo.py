@@ -128,7 +128,6 @@ class Hub:
 
     def SendMediaFile(self, filename):
         command = f'ffmpeg -y -i "{filename}" -vcodec copy -acodec copy "bit_{filename}"'
-        #command = f'ffmpeg -y -i "{filename}" -vcodec libx264 -crf 20 "bit_{filename}"'
         process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
         process.wait()
 
